@@ -46,6 +46,7 @@ import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker
 
 import { CdkMenuModule } from '@angular/cdk/menu';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HomeComponent } from './componentes/home/home.component';
 
 
 // Componentes do projeto
@@ -54,6 +55,7 @@ import { MatNativeDateModule } from '@angular/material/core';
   declarations: [
     AppComponent,
     NavComponent,
+    HomeComponent,
   ],
 
   imports: [
