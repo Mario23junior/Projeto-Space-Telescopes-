@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- import { NavComponent } from './componentes/nav/nav.component';
-  
+import { NavComponent } from './componentes/nav/nav.component';
+
 
 // Para trabalhar com formulários no Angular 12
 import { FormGroupDirective, ReactiveFormsModule } from "@angular/forms";
@@ -29,7 +29,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { FormGroup } from '@angular/forms';
 
 import { FormsModule } from '@angular/forms'
@@ -47,7 +46,8 @@ import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker
 import { CdkMenuModule } from '@angular/cdk/menu';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HomeComponent } from './componentes/home/home.component';
-import { TelescopiosListComponent } from './componentes/telescopios-list/telescopios-list.component';
+import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 // Componentes do projeto
@@ -95,7 +95,8 @@ import { TelescopiosListComponent } from './componentes/telescopios-list/telesco
     ReactiveFormsModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatGridListModule
 
   ],
   providers: [],

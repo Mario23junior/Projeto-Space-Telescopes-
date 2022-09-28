@@ -2,8 +2,8 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component';
 import { NavComponent } from './componentes/nav/nav.component';
-import { TelescopiosListComponent } from './componentes/telescopios-list/telescopios-list.component';
-
+import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
+ 
 const routes: Routes = [
   {
     path: '',
