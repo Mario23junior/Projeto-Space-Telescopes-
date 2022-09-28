@@ -2,7 +2,7 @@
     <mat-drawer #drawer class="sidenav" mode="side">
         <img src="/assets/img/hubble-space.svg" alt="">
         <mat-nav-list class="nav-list">
-            <a href="" mat-list-item routerLink="/">
+            <a href="" mat-list-item routerLink="/home">
                 <i class="material-icons">home</i>
                 Home
             </a>
@@ -27,6 +27,7 @@
         <button class = "menu" (click)="drawer.toggle()" mat-icon-button>
             <mat-icon>menu</mat-icon>
         </button>
+        <router-outlet></router-outlet>
     </div>
 
 </mat-drawer-container>
