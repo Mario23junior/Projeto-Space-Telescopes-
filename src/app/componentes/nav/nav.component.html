@@ -1,28 +1,31 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
-      <mat-nav-list class="nav-list">
-        <a href="" mat-list-item routerLink="/"> 
-            <i class =  "material-icons">home</i>
-            Home
-        </a>
-        <a href="" mat-list-item routerLink="/"> 
-            <i class =  "material-icons">home</i>
-            Home
-        </a>
-        <a href="" mat-list-item routerLink="/"> 
-            <i class =  "material-icons">home</i>
-            Home
-        </a>
-        <a href="" mat-list-item routerLink="/"> 
-            <i class =  "material-icons">home</i>
-            Home
-        </a>
-      </mat-nav-list>
+        <img src="/assets/img/hubble-space.svg" alt="">
+        <mat-nav-list class="nav-list">
+            <a href="" mat-list-item routerLink="/">
+                <i class="material-icons">home</i>
+                Home
+            </a>
+            <a href="" mat-list-item routerLink="/">
+                <i class="material-icons">satellite_alt</i>
+                Telecope
+            </a>
+            <a href="" mat-list-item routerLink="/">
+                <i class="material-icons">receipt_long</i>
+                Visualização
+            </a>
+             <a href="" mat-list-item routerLink="/">
+                <i class="material-icons">build_circle</i>
+                Operatividade
+            </a>
+
+            
+        </mat-nav-list>
     </mat-drawer>
 
     <div class="sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
+        <button class = "menu" (click)="drawer.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
         </button>
     </div>
 
