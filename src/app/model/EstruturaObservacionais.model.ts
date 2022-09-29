@@ -1,5 +1,4 @@
-export interface PropriedadeEstruturais {
-
+export interface EstruturaObservacionais {
     id: number
     massaDeLacamento: string
     potenciaEletrica: string

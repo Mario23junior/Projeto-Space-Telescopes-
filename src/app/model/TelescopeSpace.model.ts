@@ -1,3 +1,7 @@
+import { EspecificacaoOrbital } from "./EspecificacaoOrbital.model"
+import { EstruturaObservacionais } from "./EstruturaObservacionais.model"
+import { PropriedadeEstruturais } from "./PropriedadeEstruturais.model"
+
 export interface TelescopeSpace {
 
     id: Number
@@ -8,4 +12,10 @@ export interface TelescopeSpace {
     durationMissao: String
     dataDelancamento: String
     status: String
+
+    especificacaoOrbital: EspecificacaoOrbital[]
+    propriedadeEstruturais: PropriedadeEstruturais[]
+    estruturaObservacionais: EstruturaObservacionais[]
+
+
 }  
