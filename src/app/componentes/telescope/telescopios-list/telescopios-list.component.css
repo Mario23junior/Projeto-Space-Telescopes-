@@ -1,6 +1,7 @@
 .card {
     max-width: 80rem;
     margin: auto;
+    background-color: rgb(87, 87, 87)
 }
 
 .example-card{
