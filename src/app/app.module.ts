@@ -49,6 +49,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatChipsModule } from '@angular/material/chips';
+import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
 
 
 // Componentes do projeto
@@ -59,6 +60,7 @@ import { MatChipsModule } from '@angular/material/chips';
     NavComponent,
     HomeComponent,
     TelescopiosListComponent,
+    TelescopiosCreateComponent,
   ],
 
   imports: [
