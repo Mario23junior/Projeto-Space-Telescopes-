@@ -48,6 +48,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HomeComponent } from './componentes/home/home.component';
 import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 // Componentes do projeto
@@ -96,7 +97,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatGridListModule
+    MatGridListModule,
+    MatChipsModule
 
   ],
   providers: [],

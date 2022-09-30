@@ -17,8 +17,7 @@ export class TelescopeSpaceServiceService {
     return this.httpClien.get<TelescopeSpace[]>(this.baseUrl + this.url)
       .pipe(
         first(),
-        delay(1200),
-        tap(telescope => console.log(telescope))
+         tap(telescope => console.log(telescope))
       );
   }
 }
