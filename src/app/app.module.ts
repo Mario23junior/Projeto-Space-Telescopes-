@@ -50,6 +50,7 @@ import { TelescopiosListComponent } from './componentes/telescope/telescopios-li
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatChipsModule } from '@angular/material/chips';
 import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 // Componentes do projeto
@@ -100,7 +101,8 @@ import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-
     MatDatepickerModule,
     MatNativeDateModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    FlexLayoutModule
 
   ],
   providers: [],

@@ -5,5 +5,14 @@
 
 .example-card {
     margin-left: 1.12rem;
+    
 }
  
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
