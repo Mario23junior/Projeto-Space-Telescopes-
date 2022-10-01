@@ -102,7 +102,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatNativeDateModule,
     MatGridListModule,
     MatChipsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDatepickerModule 
+
 
   ],
   providers: [],

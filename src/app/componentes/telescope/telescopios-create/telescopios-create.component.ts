@@ -44,5 +44,6 @@ export class TelescopiosCreateComponent implements OnInit {
     this.router.navigate(['telescope'])
   }
 
+  
 
 }
