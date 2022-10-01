@@ -1,1 +1,50 @@
-<p>telescopios-create works!</p>
+<mat-card>
+    <mat-toolbar color="primary">
+        Inserindo um novo telescopio
+    </mat-toolbar>
+
+    <mat-card-content>
+        <form [formGroup]="form" class="min-width">
+            <p>
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o nome do telescopio</mat-label>
+                    <input matInput placeholder="Nome do telescopio" formControlName="nome">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o link de uma imagem de referencia do telescopio</mat-label>
+                    <input matInput placeholder="Link img" formControlName="img">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o tipo do telescopoio</mat-label>
+                    <input matInput placeholder="Tipo do telescopio" formControlName="tipo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o objetivo da missão</mat-label>
+                    <textarea matInput placeholder="Ibjetivo da missão" formControlName="missao"></textarea>                        
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Tempo de duraçaõ da missaõ</mat-label>
+                    <input matInput placeholder="Duração da missão" formControlName="durationMissao">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira data de lançamento</mat-label>
+                    <input matInput placeholder="Dala de lançamento" formControlName="dataDelancamento">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Status da missão</mat-label>
+                    <input matInput placeholder="Status atual da missão" formControlName="status">
+                </mat-form-field>
+            </p>
+        </form>
+     </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="onSubmit()">Salvar</button>
+        <button mat-raised-button color="warn">Cancelar</button>
+    </mat-card-actions>
+</mat-card>
