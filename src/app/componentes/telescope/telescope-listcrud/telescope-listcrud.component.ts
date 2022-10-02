@@ -26,4 +26,8 @@ export class TelescopeListcrudComponent implements OnInit {
     })
   }
 
+  public edit(tecn:TelescopeSpace){
+
+  }
+
 }

@@ -45,14 +45,16 @@
                     <mat-icon>add</mat-icon>
                 </button>
             </mat-header-cell>
+
             <mat-cell *matCellDef="let tecn">
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon (click)="edit(tecn)" >edit</mat-icon>
+                </button>
+
                 <button mat-icon-button color="warn" aria-label="Example icon button with a home icon">
                     <mat-icon>delete</mat-icon>
                 </button>
-
-                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
-                    <mat-icon>edit</mat-icon>
-                </button>
+                
             </mat-cell>
         </ng-container>
 
