@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { TelescopeListcrudComponent } from './componentes/telescope/telescope-listcrud/telescope-listcrud.component';
+import { TelescopeUpdateComponent } from './componentes/telescope/telescope-update/telescope-update.component';
 import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
 import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
 import { TelescopeSpaceServiceService } from './service/telescope-space-service.service';
@@ -28,8 +29,8 @@ const routes: Routes = [
         component: TelescopeListcrudComponent
       },
       {
-        path:'updateTelescope',
-        component:TelescopeSpaceServiceService
+        path:'updatetelescope',
+        component:TelescopeUpdateComponent
 
       }
 

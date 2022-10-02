@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
 
@@ -13,11 +14,14 @@ export class TelescopeListcrudComponent implements OnInit {
   displayColumns = ['nome', 'tipo', 'missao', 'durationMissao', 'dataDelancamento', 'status', 'actions']
 
   service: TelescopeSpaceServiceService
+  router: Router
 
   constructor(
-    service: TelescopeSpaceServiceService
+    service: TelescopeSpaceServiceService,
+    router: Router
   ) {
     this.service = service
+    this.router = router
   }
 
   ngOnInit(): void {
@@ -26,8 +30,8 @@ export class TelescopeListcrudComponent implements OnInit {
     })
   }
 
-  public edit(tecn:TelescopeSpace){
-
+  public edit() {
+    this.router.navigate(['updatetelescope'])
   }
 
 }
