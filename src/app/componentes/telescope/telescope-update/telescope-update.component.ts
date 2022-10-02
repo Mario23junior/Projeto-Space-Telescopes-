@@ -48,4 +48,9 @@ export class TelescopeUpdateComponent implements OnInit {
     })
   }
 
+  public onUpdate(){
+    this.service.findDateBaseUpdate(this.telesId).subscribe
+    this.router.navigate(['listOperatividade'])
+  }
+
 }
