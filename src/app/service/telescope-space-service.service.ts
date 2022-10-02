@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs';
+import { delay, first, Observable, tap } from 'rxjs';
 import { TelescopeSpace } from '../model/TelescopeSpace.model';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class TelescopeSpaceServiceService {
       )
   }
 
-  findById(id: number) {
+  findById(id:any): Observable<TelescopeSpace> {
     let urlresponse = `${this.baseUrl}+${this.urltelescope}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, id)
   }
