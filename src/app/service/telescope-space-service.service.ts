@@ -34,4 +34,11 @@ export class TelescopeSpaceServiceService {
     let urlresponse = `${this.baseUrl}+${this.urltelescope}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, id)
   }
+
+  findDateBaseUpdate(telescope:TelescopeSpace): Observable<TelescopeSpace> {
+    let urlresponse = `${this.baseUrl}+${this.urltelescope}${telescope.id}`
+    return this.httpClien.put<TelescopeSpace>(urlresponse, telescope)
+  }
+
+
 }
