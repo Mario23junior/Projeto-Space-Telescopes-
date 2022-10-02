@@ -10,7 +10,7 @@ export class TelescopeSpaceServiceService {
 
   private baseUrl = "http://localhost:8080"
   private urlList = "/v1/api/base/telescope/";
-  private urlPost = "/v1/api/telescopespace/"
+  private urltelescope = "/v1/api/telescopespace/"
 
   constructor(private httpClien: HttpClient) { }
 
@@ -23,10 +23,15 @@ export class TelescopeSpaceServiceService {
   }
 
   saveAll(formDate: TelescopeSpace) {
-    return this.httpClien.post<TelescopeSpace>(this.baseUrl + this.urlPost, formDate)
-    .pipe(
-      first(),
-      tap(formData => console.log(formData))
-    )
+    return this.httpClien.post<TelescopeSpace>(this.baseUrl + this.urltelescope, formDate)
+      .pipe(
+        first(),
+        tap(formData => console.log(formData))
+      )
+  }
+
+  findById(id: number) {
+    let urlresponse = `${this.baseUrl}+${this.urltelescope}`
+    return this.httpClien.put<TelescopeSpace>(urlresponse, id)
   }
 }
