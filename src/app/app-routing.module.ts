@@ -5,6 +5,7 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { TelescopeListcrudComponent } from './componentes/telescope/telescope-listcrud/telescope-listcrud.component';
 import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
 import { TelescopiosListComponent } from './componentes/telescope/telescopios-list/telescopios-list.component';
+import { TelescopeSpaceServiceService } from './service/telescope-space-service.service';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
       {
         path: 'listOperatividade',
         component: TelescopeListcrudComponent
+      },
+      {
+        path:'updateTelescope',
+        component:TelescopeSpaceServiceService
+
       }
 
     ]
