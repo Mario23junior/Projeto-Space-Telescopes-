@@ -23,7 +23,7 @@ const routes: Routes = [
         component: TelescopiosCreateComponent
       },
       {
-        path: 'createoperative',
+        path: 'listOperatividade',
         component: TelescopeListcrudComponent
       }
 

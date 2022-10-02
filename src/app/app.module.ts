@@ -21,7 +21,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -52,7 +51,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TelescopeListcrudComponent } from './componentes/telescope/telescope-listcrud/telescope-listcrud.component';
- 
+import {MatTableModule} from '@angular/material/table';
+
 
 // Componentes do projeto
 
@@ -106,7 +106,8 @@ import { TelescopeListcrudComponent } from './componentes/telescope/telescope-li
     MatGridListModule,
     MatChipsModule,
     FlexLayoutModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTableModule
 
 
   ],

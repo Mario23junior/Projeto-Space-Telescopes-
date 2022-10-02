@@ -1,0 +1,19 @@
+.limitCaractere {
+    max-width: 60ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* table {
+    max-width: auto;
+    margin: 4em auto;
+    text-align: center;
+} */
+
+table {
+  width: 100%;
+  max-width: auto;
+  margin: 4em auto;
+  
+}

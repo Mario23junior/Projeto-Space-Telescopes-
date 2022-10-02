@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
+import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
 
 @Component({
   selector: 'app-telescope-listcrud',
@@ -8,12 +9,21 @@ import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 })
 export class TelescopeListcrudComponent implements OnInit {
 
-  telescope:TelescopeSpace[] = []
-  displayColumns = ['nome','tipo','Missão','Duração da Missão','Data de lançamento','status']
+  telescope: TelescopeSpace[] = []
+  displayColumns = ['nome', 'tipo', 'missao', 'durationMissao', 'dataDelancamento', 'status','actions']
 
-  constructor() { }
+  service: TelescopeSpaceServiceService
+
+  constructor(
+    service: TelescopeSpaceServiceService
+  ) {
+    this.service = service
+  }
 
   ngOnInit(): void {
+    this.service.listAllTelescope().subscribe(listTable => {
+      this.telescope = listTable
+    })
   }
 
 }
