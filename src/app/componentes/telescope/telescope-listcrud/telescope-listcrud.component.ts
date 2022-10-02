@@ -10,7 +10,7 @@ import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-se
 export class TelescopeListcrudComponent implements OnInit {
 
   telescope: TelescopeSpace[] = []
-  displayColumns = ['nome', 'tipo', 'missao', 'durationMissao', 'dataDelancamento', 'status','actions']
+  displayColumns = ['nome', 'tipo', 'missao', 'durationMissao', 'dataDelancamento', 'status', 'actions']
 
   service: TelescopeSpaceServiceService
 
