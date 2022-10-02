@@ -52,6 +52,7 @@ import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TelescopeListcrudComponent } from './componentes/telescope/telescope-listcrud/telescope-listcrud.component';
 import {MatTableModule} from '@angular/material/table';
+import { TelescopeUpdateComponent } from './componentes/telescope/telescope-update/telescope-update.component';
 
 
 // Componentes do projeto
@@ -63,7 +64,8 @@ import {MatTableModule} from '@angular/material/table';
     HomeComponent,
     TelescopiosListComponent,
     TelescopiosCreateComponent,
-    TelescopeListcrudComponent
+    TelescopeListcrudComponent,
+    TelescopeUpdateComponent
    
   ],
 
