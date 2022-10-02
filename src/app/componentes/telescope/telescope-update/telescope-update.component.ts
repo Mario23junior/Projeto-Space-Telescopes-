@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-telescope-update',
@@ -17,7 +17,7 @@ export class TelescopeUpdateComponent implements OnInit {
   public service: TelescopeSpaceServiceService
   public route: ActivatedRoute
   public formBuilder: FormBuilder
-  public telesId: any = [] = []
+  public telesId: any =  [] = []
 
   constructor(
     formBuilder: FormBuilder,
@@ -30,13 +30,15 @@ export class TelescopeUpdateComponent implements OnInit {
     this.router = router
     this.route = route
     this.form = this.formBuilder.group({
-      nome: [null],
-      img: [null],
-      tipo: [null],
-      missao: [null],
-      durationMissao: [null],
-      dataDelancamento: [null],
-      status: [null]
+      // id: {value:null, disabled:true},
+      id:[''],
+      nome: [''],
+      img: [''],
+      tipo: [''],
+      missao: [''],
+      durationMissao: [''],
+      dataDelancamento: [''],
+      status: ['']
     })
   }
 
@@ -48,7 +50,7 @@ export class TelescopeUpdateComponent implements OnInit {
     })
   }
 
-  public onUpdate(){
+  public onUpdate() {
     this.service.findDateBaseUpdate(this.telesId).subscribe
     this.router.navigate(['listOperatividade'])
   }

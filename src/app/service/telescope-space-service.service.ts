@@ -8,9 +8,9 @@ import { TelescopeSpace } from '../model/TelescopeSpace.model';
 })
 export class TelescopeSpaceServiceService {
 
-  private baseUrl = "http://localhost:8080"
-  private urlList = "/v1/api/base/telescope/";
-  private urltelescope = "/v1/api/telescopespace/"
+  public baseUrl = "http://localhost:8080"
+  public urlList = "/v1/api/base/telescope/";
+  public urltelescope = "/v1/api/telescopespace/"
 
   constructor(private httpClien: HttpClient) { }
 
@@ -30,13 +30,16 @@ export class TelescopeSpaceServiceService {
       )
   }
 
-  findById(id:any): Observable<TelescopeSpace> {
-    let urlresponse = `${this.baseUrl}+${this.urltelescope}`
-    return this.httpClien.put<TelescopeSpace>(urlresponse, id)
+  findById(id:any) {
+    return this.httpClien.get<TelescopeSpace[]>(this.baseUrl + this.urlList + id)
+    .pipe(
+      first(),
+      tap(telescope => console.log(telescope))
+    );
   }
 
   findDateBaseUpdate(telescope:TelescopeSpace): Observable<TelescopeSpace> {
-    let urlresponse = `${this.baseUrl}+${this.urltelescope}${telescope.id}`
+    let urlresponse = `${this.baseUrl}+${this.urlList}${telescope.id}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, telescope)
   }
 

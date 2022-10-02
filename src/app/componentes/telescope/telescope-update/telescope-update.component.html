@@ -6,13 +6,18 @@
         <form [formGroup]="form" class="min-width">
             <p>
                 <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Id</mat-label> 
+                    <input matInput placeholder="Nome do telescopio" name="id" formControlName="id">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
                     <mat-label>Insira o nome do telescopio</mat-label>
-                    <input matInput placeholder="Nome do telescopio" formControlName="nome">
+                    <input matInput placeholder="Nome do telescopio" name="nome" formControlName="nome" >
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" color="accent" class="full-width">
                     <mat-label>Insira o link de uma imagem de referencia do telescopio</mat-label>
-                    <input matInput placeholder="Link img" formControlName="img">
+                    <input matInput placeholder="Link img" name="img" formControlName="img"  >
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" color="accent" class="full-width">
@@ -30,7 +35,7 @@
                     <input matInput placeholder="" formControlName="durationMissao">
                 </mat-form-field>
 
-                <mat-form-field appearance="outline" color="accent" class="full-width">
+                <mat-form-field appearance="outline" color="accent" class="full-width"> 
                     <mat-label>Insira a data de lançamento Ex: 10/11/2022</mat-label>
                     <input matInput placeholder="Duração da missão" formControlName="dataDelancamento">
                 </mat-form-field>

@@ -65,7 +65,8 @@ import { TelescopeUpdateComponent } from './componentes/telescope/telescope-upda
     TelescopiosListComponent,
     TelescopiosCreateComponent,
     TelescopeListcrudComponent,
-    TelescopeUpdateComponent
+    TelescopeUpdateComponent,
+    
    
   ],
 
@@ -109,9 +110,7 @@ import { TelescopeUpdateComponent } from './componentes/telescope/telescope-upda
     MatChipsModule,
     FlexLayoutModule,
     MatDatepickerModule,
-    MatTableModule
-
-
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
