@@ -41,20 +41,21 @@
 
         <ng-container matColumnDef="actions">
             <mat-header-cell *matHeaderCellDef>
-                <button routerLink="/createTelescope" mat-icon-button color="accent" aria-label="Example icon button with a delete icon">
+                <button routerLink="/createTelescope" mat-icon-button color="accent"
+                    aria-label="Example icon button with a delete icon">
                     <mat-icon>add</mat-icon>
                 </button>
             </mat-header-cell>
 
             <mat-cell *matCellDef="let tecn">
                 <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
-                    <mat-icon (click)="edit()" >edit</mat-icon>
+                    <mat-icon routerLink="/updatetelescope/{{tecn.id}}">edit</mat-icon>
                 </button>
 
                 <button mat-icon-button color="warn" aria-label="Example icon button with a home icon">
                     <mat-icon>delete</mat-icon>
                 </button>
-                
+
             </mat-cell>
         </ng-container>
 

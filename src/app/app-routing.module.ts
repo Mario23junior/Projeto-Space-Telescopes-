@@ -29,7 +29,7 @@ const routes: Routes = [
         component: TelescopeListcrudComponent
       },
       {
-        path:'updatetelescope',
+        path:'updatetelescope/:id',
         component:TelescopeUpdateComponent
 
       }

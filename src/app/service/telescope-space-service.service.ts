@@ -30,8 +30,9 @@ export class TelescopeSpaceServiceService {
       )
   }
 
-  findById(id:any) {
-    return this.httpClien.get<TelescopeSpace[]>(this.baseUrl + this.urlList + id)
+  findById(id: any):Observable<TelescopeSpace> {
+    let urlRequest = this.baseUrl + this.urltelescope + 1
+    return this.httpClien.get<TelescopeSpace>(urlRequest)
     .pipe(
       first(),
       tap(telescope => console.log(telescope))

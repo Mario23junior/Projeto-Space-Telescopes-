@@ -30,8 +30,6 @@ export class TelescopeListcrudComponent implements OnInit {
     })
   }
 
-  public edit() {
-    this.router.navigate(['updatetelescope'])
-  }
+  
 
 }
