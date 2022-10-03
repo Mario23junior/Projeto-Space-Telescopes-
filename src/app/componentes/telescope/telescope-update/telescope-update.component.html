@@ -21,7 +21,6 @@
                     <input matInput placeholder="Link img" name="img" formControlName="img" [(ngModel)]="dataBase.img">
                 </mat-form-field>
 
-
                 <mat-form-field appearance="outline" color="accent" class="full-width">
                     <mat-label>Insira o tipo do telescopoio</mat-label>
                     <input matInput placeholder="Tipo do telescopio" name="tipo" formControlName="tipo"
@@ -51,11 +50,10 @@
                     <input matInput placeholder="Status atual da missão" formControlName="status" name="status"
                         [(ngModel)]="dataBase.status">
                 </mat-form-field>
-            </p>
         </form>
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="accent" (click)="onUpdate()">Salvar</button>
-        <button mat-raised-button color="warn">Cancelar</button>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
     </mat-card-actions>
 </mat-card>

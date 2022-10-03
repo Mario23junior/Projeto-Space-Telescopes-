@@ -32,7 +32,7 @@ export class TelescopeUpdateComponent implements OnInit {
     this.route = router
     this.router = route
     this.form = this.formBuilder.group({
-      id: {value:null, disabled:true},
+      id: { value: null, disabled: true },
       nome: [''],
       img: [''],
       tipo: [''],
@@ -53,7 +53,11 @@ export class TelescopeUpdateComponent implements OnInit {
 
   public onUpdate() {
     this.service.findDateBaseUpdate(this.dataBase)
-    .subscribe()
+      .subscribe()
+    this.router.navigate(['/listOperatividade'])
+  }
+
+  public onCancel() {
     this.router.navigate(['/listOperatividade'])
   }
 
