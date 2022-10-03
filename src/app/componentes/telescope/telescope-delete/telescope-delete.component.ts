@@ -31,13 +31,13 @@ export class TelescopeDeleteComponent implements OnInit {
     this.router = route
     this.form = this.formBuilder.group({
       id: {value:null, disabled:true},
-      nome: [''],
-      img: [''],
-      tipo: [''],
-      missao: [''],
-      durationMissao: [''],
-      dataDelancamento: [''],
-      status: ['']
+      nome: {value:null, disabled:true},
+      img: {value:null, disabled:true},
+      tipo: {value:null, disabled:true},
+      missao: {value:null, disabled:true},
+      durationMissao: {value:null, disabled:true},
+      dataDelancamento: {value:null, disabled:true},
+      status: {value:null, disabled:true}
     })
   }
 
@@ -50,8 +50,9 @@ export class TelescopeDeleteComponent implements OnInit {
   }
 
   public onDelete() {
-    this.service.delete(this.dataBase)
-    .subscribe()
+    this.service.delete(this.dataBase.id).subscribe(telescopeBase => {
+      this.dataBase.id = telescopeBase.id
+    })
     this.router.navigate(['listOperatividade'])
   }
 

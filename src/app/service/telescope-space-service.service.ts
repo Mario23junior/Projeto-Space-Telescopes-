@@ -9,13 +9,12 @@ import { TelescopeSpace } from '../model/TelescopeSpace.model';
 export class TelescopeSpaceServiceService {
 
   public baseUrl = "http://localhost:8080"
-  public urlList = "/v1/api/base/telescope/";
   public urltelescope = "/v1/api/telescopespace/"
 
   constructor(private httpClien: HttpClient) { }
 
   listAllTelescope() {
-    return this.httpClien.get<TelescopeSpace[]>(this.baseUrl + this.urlList)
+    return this.httpClien.get<TelescopeSpace[]>(this.baseUrl + this.urltelescope)
       .pipe(
         first(),
         tap(telescope => console.log(telescope))
@@ -43,10 +42,14 @@ export class TelescopeSpaceServiceService {
     let urlresponse = `${this.baseUrl}${this.urltelescope}${telescope.id}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, telescope)
   }
-  
-  delete(id: string): Observable<TelescopeSpace> {
-    let urlresponseId = `${this.baseUrl}${this.urltelescope}${id}`
-    return this.httpClien.delete<TelescopeSpace>(urlresponseId)
-  }
 
+
+  delete(id: any) :Observable<TelescopeSpace>{
+    let url = `${this.baseUrl}${this.urltelescope}${id}`
+    return this.httpClien.delete<TelescopeSpace>(url)
+      .pipe(
+        first(),
+        tap(formData => console.log(formData))
+      )
+  }
 }
