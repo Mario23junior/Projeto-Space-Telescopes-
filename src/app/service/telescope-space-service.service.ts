@@ -31,7 +31,7 @@ export class TelescopeSpaceServiceService {
   }
 
   findById(id: any):Observable<TelescopeSpace> {
-    let urlRequest = this.baseUrl + this.urltelescope + 1
+    let urlRequest = this.baseUrl + this.urltelescope + id
     return this.httpClien.get<TelescopeSpace>(urlRequest)
     .pipe(
       first(),
@@ -40,7 +40,7 @@ export class TelescopeSpaceServiceService {
   }
 
   findDateBaseUpdate(telescope:TelescopeSpace): Observable<TelescopeSpace> {
-    let urlresponse = `${this.baseUrl}+${this.urlList}${telescope.id}`
+    let urlresponse = `${this.baseUrl}+${this.urlList}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, telescope)
   }
 
