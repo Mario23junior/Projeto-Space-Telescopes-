@@ -43,6 +43,10 @@ export class TelescopeSpaceServiceService {
     let urlresponse = `${this.baseUrl}${this.urltelescope}${telescope.id}`
     return this.httpClien.put<TelescopeSpace>(urlresponse, telescope)
   }
-
+  
+  delete(id: string): Observable<TelescopeSpace> {
+    let urlresponseId = `${this.baseUrl}${this.urltelescope}${id}`
+    return this.httpClien.delete<TelescopeSpace>(urlresponseId)
+  }
 
 }

@@ -1,1 +1,54 @@
-<p>telescope-delete works!</p>
+<mat-card>
+    <mat-toolbar color="primary">
+        Deletando dados de telescopios Espaciais
+    </mat-toolbar>
+    <mat-card-content>
+        <form [formGroup]="form" class="min-width">
+            <p>
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Id</mat-label> 
+                    <input matInput placeholder="Nome do telescopio"  [(ngModel)]="dataBase.id" formControlName = "id">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o nome do telescopio</mat-label>
+                    <input matInput placeholder="Nome do telescopio" name="nome" formControlName="nome"  [(ngModel)]="dataBase.nome">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o link de uma imagem de referencia do telescopio</mat-label>
+                    <input matInput placeholder="Link img" name="img" formControlName="img"  [(ngModel)]="dataBase.img" >
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o tipo do telescopoio</mat-label>
+                    <input matInput placeholder="Tipo do telescopio" name="tipo" formControlName="tipo"  [(ngModel)]="dataBase.tipo">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Insira o objetivo da missão</mat-label>
+                    <textarea matInput placeholder="Ibjetivo da missão" name="missao" formControlName="missao"  [(ngModel)]="dataBase.missao"></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Tempo de duraçaõ da missaõ</mat-label>
+                    <input matInput placeholder="" formControlName="durationMissao" name="durationMissao"  [(ngModel)]="dataBase.durationMissao">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width"> 
+                    <mat-label>Insira a data de lançamento Ex: 10/11/2022</mat-label>
+                    <input matInput placeholder="Duração da missão" formControlName="dataDelancamento" name="dataDelancamento"  [(ngModel)]="dataBase.dataDelancamento">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" color="accent" class="full-width">
+                    <mat-label>Status da missão</mat-label>
+                    <input matInput placeholder="Status atual da missão" formControlName="status" name="status"  [(ngModel)]="dataBase.status">
+                </mat-form-field>
+            </p>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="onDelete()">Salvar</button>
+        <button mat-raised-button color="warn">Cancelar</button>
+    </mat-card-actions>
+</mat-card>
