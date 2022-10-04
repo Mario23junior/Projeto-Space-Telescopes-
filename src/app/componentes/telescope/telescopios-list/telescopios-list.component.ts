@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
 
@@ -21,7 +21,14 @@ export class TelescopiosListComponent implements OnInit {
       this.data = data
       console.log(data)
     }),
+
     this.dataBase = this.service.listAllTelescope()
+    .pipe(
+      catchError(error => {
+        console.log(error)
+        return of([])
+      })
+    )
   }
 
   title = 'Card View Demo';
@@ -30,7 +37,7 @@ export class TelescopiosListComponent implements OnInit {
 
   toggleGridColumns() {
     this.gridColumns = this.gridColumns === 3 ? 4 : 3;
-  }
+  } 
 
   ngOnInit(): void {
   }
