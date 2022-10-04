@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-    <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="telescope">
+    <table mat-table class="full-width-table" *ngIf="dataBase | async as telescopeData; else loadingPage" matSort aria-label="Elements" [dataSource]="telescope">
         <!-- Id Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -63,3 +63,8 @@
         <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
     </table>
 </div>
+<ng-template #loadingPage>
+    <div class="loading-spinner">
+        <mat-spinner value="20" strokeWidth="3" diameter=220></mat-spinner>
+    </div>
+</ng-template>

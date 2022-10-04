@@ -1,8 +1,8 @@
 .limitCaractere {
-    max-width: 60ch;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  max-width: 60ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* table {
@@ -15,5 +15,13 @@ table {
   width: 100%;
   max-width: auto;
   margin: 4em auto;
-  
+
+}
+
+.loading-spinner {
+  padding: 9rem;
+  background-color: 0, 0, 0, 0.15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
