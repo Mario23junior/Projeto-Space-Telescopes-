@@ -41,6 +41,8 @@ export class TelescopiosCreateComponent implements OnInit {
 
   public onSubmit() {
     this.service.saveAll(this.form.value).subscribe()
+    this.router.navigate(['listOperatividade'])
+
    }
 
   public onCancelar(){
