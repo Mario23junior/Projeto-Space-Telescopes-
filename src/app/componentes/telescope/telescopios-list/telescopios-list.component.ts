@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { catchError, Observable, of } from 'rxjs';
 import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
+import { ErrorDialogComponent } from '../../error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-telescopios-list',
@@ -14,7 +16,8 @@ export class TelescopiosListComponent implements OnInit {
   dataBase:Observable<TelescopeSpace[]>
 
   constructor(
-    private service: TelescopeSpaceServiceService
+    private service: TelescopeSpaceServiceService,
+    public dialog: MatDialog
   ) { 
     this.service.listAllTelescope()
     .subscribe(data => {
@@ -25,10 +28,16 @@ export class TelescopiosListComponent implements OnInit {
     this.dataBase = this.service.listAllTelescope()
     .pipe(
       catchError(error => {
-        console.log(error)
+        this.orError('Erro ao se conectar com a base central de dados, por favor tente mais tarde.')
         return of([])
       })
     )
+  }
+
+  orError(errorMsg:String) {
+    this.dialog.open(ErrorDialogComponent, {
+      data: errorMsg
+    });
   }
 
   title = 'Card View Demo';

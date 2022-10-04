@@ -51,11 +51,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { TelescopiosCreateComponent } from './componentes/telescope/telescopios-create/telescopios-create.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TelescopeListcrudComponent } from './componentes/telescope/telescope-listcrud/telescope-listcrud.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { TelescopeUpdateComponent } from './componentes/telescope/telescope-update/telescope-update.component';
 import { TelescopeDeleteComponent } from './componentes/telescope/telescope-delete/telescope-delete.component';
 import { ErrorDialogComponent } from './componentes/error-dialog/error-dialog.component';
- 
+
 
 // Componentes do projeto
 
@@ -70,8 +70,8 @@ import { ErrorDialogComponent } from './componentes/error-dialog/error-dialog.co
     TelescopeUpdateComponent,
     TelescopeDeleteComponent,
     ErrorDialogComponent,
-    
-   
+
+
   ],
 
   imports: [
@@ -115,6 +115,7 @@ import { ErrorDialogComponent } from './componentes/error-dialog/error-dialog.co
     FlexLayoutModule,
     MatDatepickerModule,
     MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
