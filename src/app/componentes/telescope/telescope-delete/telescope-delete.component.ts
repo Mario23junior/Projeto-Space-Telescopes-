@@ -53,7 +53,7 @@ export class TelescopeDeleteComponent implements OnInit {
     this.service.delete(this.dataBase.id).subscribe(telescopeBase => {
       this.dataBase.id = telescopeBase.id
     })
-    this.router.navigate(['listOperatividade'])
+    this.router.navigate(['/listOperatividade'])
   }
 
 }
