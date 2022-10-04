@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { TelescopeSpace } from 'src/app/model/TelescopeSpace.model';
 import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-service.service';
 
@@ -10,6 +11,8 @@ import { TelescopeSpaceServiceService } from 'src/app/service/telescope-space-se
 export class TelescopiosListComponent implements OnInit {
   
   data:TelescopeSpace[] = []
+  dataBase:Observable<TelescopeSpace[]>
+
   constructor(
     private service: TelescopeSpaceServiceService
   ) { 
@@ -17,7 +20,8 @@ export class TelescopiosListComponent implements OnInit {
     .subscribe(data => {
       this.data = data
       console.log(data)
-    })
+    }),
+    this.dataBase = this.service.listAllTelescope()
   }
 
   title = 'Card View Demo';

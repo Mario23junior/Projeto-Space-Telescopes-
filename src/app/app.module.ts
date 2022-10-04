@@ -54,7 +54,7 @@ import { TelescopeListcrudComponent } from './componentes/telescope/telescope-li
 import {MatTableModule} from '@angular/material/table';
 import { TelescopeUpdateComponent } from './componentes/telescope/telescope-update/telescope-update.component';
 import { TelescopeDeleteComponent } from './componentes/telescope/telescope-delete/telescope-delete.component';
-
+ 
 
 // Componentes do projeto
 
